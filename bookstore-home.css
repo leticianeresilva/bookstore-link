@@ -1,0 +1,576 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#FAFAFA;
+    text-align: center;
+}
+
+header {
+    background-color: #BFAB94;
+    background-image: url(header-inicio.png); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Garante que a imagem cobre todo o header */
+    background-position: center; /* Centraliza a imagem no header */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin: 0; /* Adiciona margem zero para garantir que o header cubra todo o espaço horizontal */
+}
+
+h1 {
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+}
+
+nav ul {
+    font-size: 25px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Coloca os links em coluna */
+    align-items: center; /* Centraliza os links */
+}
+
+nav ul li:nth-child(odd) {
+    margin-right: 45%; /* Move para a esquerda */
+}
+
+nav ul li:nth-child(even) {
+    margin-left: 45%; /* Move para a direita */
+}
+
+nav ul li {
+    margin: 10px 0; /* Adiciona espaço acima e abaixo de cada link */
+    font-family: 'baskerville';
+    text-transform: uppercase;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px; /* Adiciona espaço interno aos links */
+    border-radius: 10px;
+    background-color: #A7A1CD; /* Cor do fundo do retângulo */
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav a:hover {
+    transform: translate(-5px, -5px) scale(1.1); /* Move o link para a frente e aumenta em 10% */
+    box-shadow: 0 0 5px #8B7A68;
+}
+
+@font-face {
+    font-family:'Baskerville';
+    src:url("Fry's Baskerville Regular.otf");
+    font-family:'Montserrat';
+    src:url("Montserrarat Light.otf");
+    font-family:'Roman';
+    src:url("Art Club Roman.otf");
+    font-family:'Bebas Neue';
+    src:url("Bebas\ Neue\ Regular.ttf");
+    font-family:'georgia pro';
+    src:url("georgia-pro-cond.ttf");
+    font-family:'lato bold';
+    src:url("Lato\ Bold.ttf");
+    font-family:'now bold';
+    src:url("Now-Bold.otf");
+    font-family:'now regular';
+    src:url("Now-Regular.otf");
+    font-family:'now medium';
+    src:url("Now-Medium.otf");
+    font-family:'glacial regular';
+    src:url("");
+    font-family:'glacial bold';
+    src:url("GlacialIndifference-Bold.otf");
+    font-family:'trocchi';
+    src:url("Trocchi.ttf");
+}
+
+.container {
+    position: relative;
+    padding-top: 10%;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-over {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text-over h2 {
+    font-family:'Roman';
+    font-size: 75px;
+    -webkit-text-stroke: 0.2px rgb(121, 107, 60); /* Adiciona contorno usando text-stroke (para navegadores que suportam) */
+    padding: 10px; /* Adiciona espaço interno ao redor do texto */
+}
+
+.text-over p {
+    font-family:'Montserrat';
+    font-size: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+}
+
+          /* seção mais vendidos */
+
+#mais-vendidos {
+  padding: 20px;
+}
+
+#mais-vendidos h2 {
+  font-size: 65px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-shadow: 
+                -1px -1px 7px #A69FCF, 
+                1px -1px 7px #A69FCF, 
+                -1px 1px 7px #A69FCF,
+                1px 1px 7px #A69FCF,
+                0 0 25px #A69FCF; /* Sombra e contorno com text-shadow */
+  font-family:'Baskerville';
+}
+
+.decoracao {
+  position: relative;
+  margin-bottom: 10%;
+}
+
+.imagem-principal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra completamente o contêiner */
+}
+
+.imagem-secundaria {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza a imagem secundária */
+  width: 700px; /* Largura da imagem secundária */
+  height: 200px; /* Altura da imagem secundária */
+  object-fit: cover; /* Garante que a imagem secundária mantenha suas proporções */
+  z-index: 1; /* Coloca a imagem secundária acima da imagem principal */
+}
+
+.livros-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.livro {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 10%;
+  border-radius: 50px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.livro img {
+  width: 100%;
+  max-width: 150px; /* Ajuste conforme necessário */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.preco {
+  font-weight: bold;
+  color: #007bff; /* Cor azul, você pode ajustar conforme necessário */
+  font-size: 20px;
+}
+
+.botao-comprar {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #0272eb;
+  border: 2px solid #0272eb;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para o botão quando passa o mouse por cima */
+.botao-comprar:hover {
+  background-color: #0f5299;
+  border-color: #0f5299;
+}
+
+          /* seção promoção */
+
+section.promocoes {
+  text-align: center;
+  margin: 20px 0;
+}
+
+section.promocoes .imagem-titulo-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+section.promocoes img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+section.promocoes h2 {
+  font-size: 65px;
+  color: #F0E3D3;
+  margin: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-family: 'Basjerville';
+  text-transform: uppercase;
+}
+
+section.promocoes .livrospromo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+section.promocoes .livropromo {
+  width: 40%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ebe5f1;
+  position: relative;
+  overflow: hidden;
+}
+
+section.promocoes .livropromo img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section.promocoes .livropromo:hover img {
+  opacity: 1; /* Mostra a imagem ao passar o mouse sobre o livro */
+}
+
+section.promocoes .livropromo h3,
+section.promocoes .livropromo p {
+  transition: color 0.3s ease-in-out; /* Transição de cor ao passar o mouse */
+}
+
+section.promocoes .livropromo:hover h3,
+section.promocoes .livropromo:hover p {
+  color: #605889; /* Altera a cor ao passar o mouse sobre o livro */
+}
+
+section.promocoes .livropromo .preco-original {
+  text-decoration: line-through;
+  color: rgb(92, 157, 241);
+}
+
+section.promocoes .livropromo .preco-promocao {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.livropromo h3 {
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+}
+
+.autorpromo {
+  font-family: 'Bebas Neue';
+}
+
+          /* seção prevenda */
+
+section.prevenda {
+  text-align: center;
+  margin: 20px 0;
+}
+
+section.prevenda .imagem-titulo-prevenda {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+section.prevenda img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+section.prevenda h2 {
+  font-size: 80px;
+  color: #DCDAE8;
+  margin: 10px;
+  text-shadow: 
+                -1px -1px 3px #66627B, 
+                1px -1px 3px #66627B, 
+                -1px 1px 3px #66627B,
+                1px 1px 3px #66627B,
+                0 5px 7px #ADAABD; /* Sombra e contorno com text-shadow */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-family: 'georgia pro';
+  text-transform: uppercase;
+}
+
+section.prevenda {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.livroprevenda {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 100px;
+  background-color: #fff;
+}
+
+.livroprevenda h3 {
+  font-size: 25px;
+  font-family: 'now bold';
+}
+
+.autorprevenda {
+  font-size: 16px;
+  color: #5b4f6e;
+  font-family: 'now regular';
+}
+
+.capa-sinopse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.capa-sinopse img {
+  max-width: 200px;
+  border-radius: 15px;
+  margin-left: 50px;
+}
+
+.sinopseprevenda {
+  flex: 1;
+  margin-left: 20px;
+  margin: 0 80px;
+  text-align: left;
+  font-family: 'now regular';
+  font-size: 18px;
+}
+
+.data-lancamento {
+  color: #555;
+  margin-top: 10px;
+}
+
+.btn-pre-venda {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-family:'now medium';
+}
+
+.btn-pre-venda:hover {
+  background-color: #267bb8;
+}
+
+          /* seção clube de leitura */
+
+#clubeler {
+  padding: 20px;
+}
+
+.decoracaoclube {
+  position: relative;
+  margin-bottom: 10%;
+}
+
+.imagem-principal-clube {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra completamente o contêiner */
+}
+
+.imagem-secundaria-clube {
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza a imagem secundária */
+  width: 550px; /* Largura da imagem secundária */
+  height: 250px; /* Altura da imagem secundária */
+  object-fit: cover; /* Garante que a imagem secundária mantenha suas proporções */
+  z-index: 1; /* Coloca a imagem secundária acima da imagem principal */
+}
+
+section.clube-leitura {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.livroclube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  max-width: 600px; /* Ajuste conforme necessário */
+  margin: 0 auto; /* Centraliza o bloco do livro */
+  margin-bottom: 40px;
+}
+
+.livroclube img {
+  max-width: 150px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.livroclube .info-livroclube {
+  text-align: left;
+}
+
+.livroclube h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-family: 'trocchi';
+}
+
+.autoraclube {
+  font-family: 'trocchi';
+}
+
+.autoraclube, .sinopseclube, .quantidade-avaliacao {
+  margin-top: 10px;
+  color: #555;
+}
+
+.quantidade-avaliacao {
+  font-family:'glacial bold';
+  color: #498aec;
+  font-size: 17px;
+}
+
+.sinopseclube {
+  font-family: 'glacial regular';
+  font-size: 16px;
+}
+
+.btn-assine {
+  background-color: #9d49e2;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 40px;
+}
+
+.btn-assine:hover {
+  background-color: #632a92;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* seção footer */
+
+footer {
+  background-color: #6F6151;
+  padding: 15px;
+}
+
+.contato, .redessociais {
+  text-align: left;
+  margin-left: 25%;
+  text-transform: uppercase;
+}
+
+.contato h4 {
+  color: #FFFFFF;
+  font-size: 25px;
+}
+
+.contato p {
+  color: #E8E7E7;
+  font-size: 20px;
+}
+
+.redessociais {
+  margin-top: 20px;
+}
+
+.redessociais h4 {
+  color: #FFFFFF;
+  font-size: 25px;
+}
+
+.redessociais img {
+  width: 350px; /* Ajuste o tamanho conforme necessário */
+  margin-top: 5px;
+}
+
+.direitos-autorais {
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
